@@ -1,6 +1,11 @@
+import ApodCard from '../../components/ApodCard/ApodCard'
+
 const Home = () => {
   return(
-    <h1>Home page</h1>
+    <div>
+      <h1>Home page</h1>
+      <ApodCard/>
+    </div>
   )
 }
 

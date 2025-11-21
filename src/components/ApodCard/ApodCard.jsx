@@ -1,7 +1,9 @@
 const ApodCard = () => {
   return (
     <div>
-      APOD Card
+      <h2>Title</h2>
+      <p>Description</p>
+      <img src="" alt="" />
     </div>
   )
 }

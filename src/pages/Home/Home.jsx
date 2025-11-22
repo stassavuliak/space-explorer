@@ -1,12 +1,22 @@
 import ApodCard from '../../components/ApodCard/ApodCard'
+import  useApod  from '../../hooks/useApod'
+import { mockApod } from '../../api/mockApod'
+import Loader from '../../components/Loader/Loader'
 
 const Home = () => {
-  return(
-    <div>
-      <h1>Home page</h1>
-      <ApodCard/>
-    </div>
-  )
+  const { apod, loading, error } = useApod()
+
+  if (loading) {
+    return <Loader/>
+  }
+
+  if (error) {
+    return <h2>Error! Something went wrong</h2>
+  }
+
+  return <ApodCard apod={mockApod} />
+
+
 }
 
 export default Home

@@ -1,0 +1,42 @@
+.header {
+  background: #0b0d17;
+  padding: 15px 0;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    b {
+      color: #FC3D21;
+    }
+    span {
+      color: #0B3D91;
+    }
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+      gap: 24px;
+      list-style-type: none;
+    }
+  }
+
+  &__link {
+    color: #dddddd;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}

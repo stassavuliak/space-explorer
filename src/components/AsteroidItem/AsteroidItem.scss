@@ -1,0 +1,36 @@
+.asteroid-item {
+  background: #ffffff;
+  border-left: 6px solid #0b3d91; // default NASA blue
+  padding: 18px 20px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  transition: 0.25s ease;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #0b3d91;
+  }
+
+  &__text {
+    margin: 6px 0;
+    font-size: 15px;
+    color: #333;
+  }
+
+  .danger {
+    color: #fc3d21; // NASA red
+    font-weight: 700;
+  }
+
+  .safe {
+    color: #0a8f08;
+    font-weight: 700;
+  }
+
+  &.hazardous {
+    border-left-color: #fc3d21; // NASA red
+  }
+}

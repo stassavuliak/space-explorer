@@ -4,7 +4,14 @@ import { mockApod } from '../../api/mockApod'
 import Loader from '../../components/Loader/Loader'
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage'
 
+import { useEffect } from "react";
+import { getAsteroids } from "../../api/asteroids";
+
 const Home = () => {
+  useEffect(() => {
+    getAsteroids()
+  }, [])
+
   const { apod, loading, error } = useApod()
 
   if (loading) return <Loader/>
@@ -12,8 +19,6 @@ const Home = () => {
   if (error) return <ErrorMessage message={error.message} />
 
   return <ApodCard apod={mockApod} />
-
-
 }
 
 export default Home

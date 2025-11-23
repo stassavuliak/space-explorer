@@ -6,11 +6,11 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <div className="header__wrap">
-          <h1 className="header__logo">
+          <Link to="/" className="header__logo">
             <b>S</b>pace 
             <br /> 
             <span>E</span>xplorer
-          </h1>
+          </Link>
 
           <nav className="header__nav">
             <ul>

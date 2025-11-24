@@ -1,0 +1,22 @@
+.asteroids-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 16px;
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #0b3d91; // NASA Blue
+    text-align: left;
+  }
+}
+
+.asteroids-list {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 15px;
+  @media (min-width: 800px) {
+    grid-template-columns: 1fr 1fr; 
+  }
+}

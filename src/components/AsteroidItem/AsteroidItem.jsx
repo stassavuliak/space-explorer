@@ -3,7 +3,7 @@ import "./AsteroidItem.scss";
 const AsteroidItem = ({ name, diameter, hazardous, approachDate, speed }) => {
   return (
     <div className={`asteroid-item ${hazardous ? "hazardous" : ""}`}>
-      <h3 className="asteroid-item__title">{name}</h3>
+      <h3 className="asteroid-item__title">Asteroid name: {name}</h3>
 
       <p className="asteroid-item__text">
         <strong>Diameter:</strong> {diameter} m

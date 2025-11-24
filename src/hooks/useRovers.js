@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
-import { getAsteroids } from "../api/asteroids"
+import { getLatestRoverPhotos } from "../api/rovers"
 
-const useAsteroids = () => {
+const useRovers = () => {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -9,7 +9,7 @@ const useAsteroids = () => {
   useEffect(() => {
     let mounted = true
 
-    getAsteroids()
+    getLatestRoverPhotos()
       .then((result) => {
         if (!mounted) return
         setData(result)
@@ -22,7 +22,7 @@ const useAsteroids = () => {
         if (!mounted) return
         setLoading(false)
       })
-
+    
     return () => {
       mounted = false
     }
@@ -31,4 +31,4 @@ const useAsteroids = () => {
   return { data, loading, error }
 }
 
-export default useAsteroids
+export default useRovers
